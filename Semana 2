@@ -1,0 +1,79 @@
+using System;
+
+namespace FigurasGeometricas
+{
+    // Clase Circulo que representa la figura del círculo
+    public class Circulo
+    {
+        // Encapsulamos el atributo radio con propiedad
+        private double radio;
+
+        // Constructor de la clase
+        public Circulo(double radio)
+        {
+            this.radio = radio;
+        }
+
+        // Método para calcular el área del círculo
+        // Área = π * radio^2
+        public double CalcularArea()
+        {
+            return Math.PI * radio * radio;
+        }
+
+        // Método para calcular el perímetro del círculo
+        // Perímetro = 2 * π * radio
+        public double CalcularPerimetro()
+        {
+            return 2 * Math.PI * radio;
+        }
+    }
+
+    // Clase Rectangulo que representa la figura del rectángulo
+    public class Rectangulo
+    {
+        // Encapsulamos base y altura como atributos privados
+        private double baseRect;
+        private double altura;
+
+        // Constructor de la clase
+        public Rectangulo(double baseRect, double altura)
+        {
+            this.baseRect = baseRect;
+            this.altura = altura;
+        }
+
+        // Método para calcular el área del rectángulo
+        // Área = base * altura
+        public double CalcularArea()
+        {
+            return baseRect * altura;
+        }
+
+        // Método para calcular el perímetro del rectángulo
+        // Perímetro = 2 * (base + altura)
+        public double CalcularPerimetro()
+        {
+            return 2 * (baseRect + altura);
+        }
+    }
+
+    // Clase principal para probar las figuras
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Crear un círculo con radio 5
+            Circulo circulo = new Circulo(5);
+            Console.WriteLine("Círculo:");
+            Console.WriteLine("Área: " + circulo.CalcularArea());
+            Console.WriteLine("Perímetro: " + circulo.CalcularPerimetro());
+
+            // Crear un rectángulo con base 4 y altura 3
+            Rectangulo rectangulo = new Rectangulo(4, 3);
+            Console.WriteLine("\nRectángulo:");
+            Console.WriteLine("Área: " + rectangulo.CalcularArea());
+            Console.WriteLine("Perímetro: " + rectangulo.CalcularPerimetro());
+        }
+    }
+}
