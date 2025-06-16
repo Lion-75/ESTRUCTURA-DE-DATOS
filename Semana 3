@@ -1,0 +1,65 @@
+using System;
+
+namespace RegistroEstudiante
+{
+    // Clase que representa un estudiante
+    class Estudiante
+    {
+        // Atributos
+        public int Id;
+        public string Nombres;
+        public string Apellidos;
+        public string Direccion;
+        public string[] Telefonos = new string[3]; // Array para tres teléfonos
+
+        // Método para mostrar los datos del estudiante
+        public void MostrarDatos()
+        {
+            Console.WriteLine("ID: " + Id);
+            Console.WriteLine("Nombres: " + Nombres);
+            Console.WriteLine("Apellidos: " + Apellidos);
+            Console.WriteLine("Dirección: " + Direccion);
+            Console.WriteLine("Teléfonos:");
+            for (int i = 0; i < Telefonos.Length; i++)
+            {
+                Console.WriteLine($"Teléfono {i + 1}: {Telefonos[i]}");
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Crear un nuevo estudiante
+            Estudiante estudiante = new Estudiante();
+
+            // Solicitar datos al usuario
+            Console.Write("Ingrese el ID del estudiante: ");
+            estudiante.Id = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Ingrese los nombres: ");
+            estudiante.Nombres = Console.ReadLine();
+
+            Console.Write("Ingrese los apellidos: ");
+            estudiante.Apellidos = Console.ReadLine();
+
+            Console.Write("Ingrese la dirección: ");
+            estudiante.Direccion = Console.ReadLine();
+
+            // Ingresar los tres teléfonos
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Ingrese el teléfono {i + 1}: ");
+                estudiante.Telefonos[i] = Console.ReadLine();
+            }
+
+            // Mostrar datos
+            Console.WriteLine("\nDatos del estudiante registrados:");
+            estudiante.MostrarDatos();
+
+            Console.WriteLine("\nPresione cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+    }
+}
