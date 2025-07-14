@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "q/02fen8DdA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\INSPIRON 15\\Documents\\ESTRUCTURA DE DATOS\\Proyectos\\tareas\\Semana07\\Ejercicio1\\Ejercicio1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\INSPIRON 15\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\INSPIRON 15\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\INSPIRON 15\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\INSPIRON 15\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
