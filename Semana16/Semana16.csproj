@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 
+      OutputType define qué tipo de archivo genera el proyecto.
+      En este caso "Exe" indica que será un ejecutable de consola (.exe).
+    -->
+    <OutputType>Exe</OutputType>
+
+    <!-- 
+      Framework objetivo: net9.0 significa que se compilará y ejecutará
+      bajo la plataforma .NET 9.0.
+    -->
+    <TargetFramework>net9.0</TargetFramework>
+
+    <!-- 
+      Habilita los "usings" implícitos para no repetir 
+      System, Collections, etc., en cada archivo .cs.
+    -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- 
+      Activa las anotaciones de referencia nulas.
+      Ayuda al compilador a advertir sobre posibles NullReferenceException.
+    -->
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 
+      Se incluye el archivo de datos "vuelos.txt".
+      La opción <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      garantiza que se copie automáticamente a la carpeta de salida (bin/Debug/net9.0)
+      cada vez que se ejecute el programa, para que esté disponible en tiempo de ejecución.
+    -->
+    <None Include="vuelos.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
